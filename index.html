@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <title>Times Table Challenge</title>
+  </head>
+  <body class="grad">
+    <div class="sidenav">
+      <a class="title">Sloanes Tables Challenge</a>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact us</a>
+      <button class="tables-btn">
+        Times tables<i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#">1x Times</a>
+        <a href="#">2x Times</a>
+        <a href="#">3x Times</a>
+        <a href="#">4x Times</a>
+        <a href="#">5x Times</a>
+        <a href="#">6x Times</a>
+        <a href="#">7x Times</a>
+        <a href="#">8x Times</a>
+        <a href="#">9x Times</a>
+        <a href="Ten.html">10x Times</a>
+        <a href="#">11x Times</a>
+        <a href="#">12x Times</a>
+      </div>
+    </div>
+
+    <main>
+      <div class="container grid-wrapper">
+        <div class="box"><a href=""></a>1</div>
+        <div class="box"><a href=""></a>2</div>
+        <div class="box"><a href=""></a>3</div>
+        <div class="box"><a href=""></a>4</div>
+        <div class="box"><a href=""></a>5</div>
+        <div class="box"><a href=""></a>6</div>
+        <div class="box"><a href=""></a>7</div>
+        <div class="box"><a href=""></a>8</div>
+        <div class="box"><a href=""></a>9</div>
+        <div class="box"><a href="Ten.html">10</a></div>
+        <div class="box"><a href=""></a>11</div>
+        <div class="box"><a href=""></a>12</div>
+      </div>
+    </main>
+
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("tables-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
